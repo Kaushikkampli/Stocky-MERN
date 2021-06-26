@@ -4,3 +4,5 @@ Queries have to be made by the symbol of the stock.(Google xD)
 
 Todo:
 Optimizing the index route which is relatively slower since prices for each stock has to be updated everytime.
+
+![Demo](Stocky.gif)
