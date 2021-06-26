@@ -1,4 +1,4 @@
-CS50's iconic Finanace Project built from scratch making use of the MERN Stack.
+CS50's iconic Finance Project built from scratch making use of the MERN Stack.
 Realtime Stock Prices were fetched by api calls to the iex cloud server.
 Queries have to be made by the symbol of the stock.(Google xD)
 
