@@ -1,0 +1,20 @@
+.container {
+    padding-top: 3rem;
+    text-align: center;
+}
+.alert {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    display: inline-block;
+    width: auto;
+}
+
+.btn {
+    width: auto;
+}
