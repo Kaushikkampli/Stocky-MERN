@@ -28,13 +28,16 @@ function Login(props) {
     
         axios.post("/users/login", user, {withCredentials: true})
             .then((res) => {
-                console.log(res.data.username)
+                console.log(res.data)
                 localStorage.setItem("user", res.data)
                 props.displayMsg("Logged In!")
                 props.authenticate()
                 history.push("/index")
             })
-            .catch((err) => console.log(err))
+            .catch((err) => {
+                console.log(err)
+                props.displayMsg("Invalid Credentials")
+            })
     }
 
 

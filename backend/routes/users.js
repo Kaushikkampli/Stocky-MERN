@@ -36,7 +36,7 @@ router.route("/login")
             if(err)
                 return next(err)
             if(!user) 
-                return res.json("err login")
+                return res.status(401).json("invalid credentials")
             req.logIn(user, function(err) 
             {
                 if(err) 
