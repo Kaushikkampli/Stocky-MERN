@@ -28,7 +28,7 @@ function Buy(props) {
 
         event.preventDefault()
 
-        await axios.post("/trans/buy", stock, {withCredentials: true})
+        await axios.post("/api/trans/buy", stock, {withCredentials: true})
             .then((res) => {
                 console.log(res.data)
                 props.displayMsg(res.data)

@@ -26,7 +26,7 @@ function Login(props) {
     async function Authenticate(event) {
         event.preventDefault()
     
-        axios.post("/users/login", user, {withCredentials: true})
+        axios.post("/api/users/login", user, {withCredentials: true})
             .then((res) => {
                 console.log(res.data)
                 localStorage.setItem("user", res.data)

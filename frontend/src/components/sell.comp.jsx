@@ -16,7 +16,7 @@ function Sell(props) {
     const [data, setData] = useState()
 
     useEffect(function(){
-        axios.get("/trans/preSell", {withCredentials: true})
+        axios.get("/api/trans/preSell", {withCredentials: true})
             .then((res) => {
                 setData(res.data)
                 setLoading(false)
@@ -39,7 +39,7 @@ function Sell(props) {
         
         event.preventDefault()
 
-        await axios.post("http://localhost:5000/trans/sell", stock, {withCredentials: true})
+        await axios.post("/api/trans/sell", stock, {withCredentials: true})
             .then((res) => {
                 console.log(res.data)
                 props.displayMsg(res.data)

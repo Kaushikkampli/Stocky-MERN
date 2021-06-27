@@ -5,7 +5,7 @@ function Logout(props) {
 
     let history = useHistory()
 
-    axios.get("/users/logout", {withCredentials: true})
+    axios.get("/api/users/logout", {withCredentials: true})
         .then((res) => {
             console.log(res.data)
             props.displayMsg(res.data)

@@ -34,7 +34,7 @@ function Index() {
 
     useEffect(function(){
         
-        axios.get("/trans/index", {withCredentials: true})
+        axios.get("/api/trans/index", {withCredentials: true})
             .then(res => {
                 console.log(res.data)
                 setData(res.data)

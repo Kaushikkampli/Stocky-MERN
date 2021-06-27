@@ -20,7 +20,7 @@ function History() {
     const[data, setData] = useState()
 
     useEffect(function() {
-        axios.get("/trans/history", {withCredentials: true})
+        axios.get("/api/trans/history", {withCredentials: true})
             .then((res) => {
                 console.log(res.data)
                 setData(res.data)

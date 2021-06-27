@@ -33,7 +33,7 @@ function Quote() {
     }
 
     function getQuote(event) {
-        axios.post("/trans/quote", stock, {withCredentials: true})
+        axios.post("/api/trans/quote", stock, {withCredentials: true})
             .then(function(res) {
                 handleData(res.data)
             })

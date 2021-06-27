@@ -27,7 +27,7 @@ function Register(props) {
     async function addUser(event) {
         event.preventDefault()
 
-        await axios.post("/users/register", user)
+        await axios.post("/api/users/register", user)
             .then((res) => {
                 console.log(res.data)
                 props.displayMsg(res.data)
