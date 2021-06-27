@@ -6,9 +6,9 @@ function TableRow(props) {
         <tr>
             <th scope="row">{props.index + 1}</th>
             <td>{props.stock.symbol}</td>
-            <td>${props.stock.price}</td>
             <td>{props.stock.shares}</td>
-            <td>${Math.round((props.stock.price * props.stock.shares) * 100)/100}</td>
+            <td>${props.stock.price}</td>
+            <td>${Math.abs(Math.round((props.stock.price * props.stock.shares) * 100)/100)}</td>
             <td>{props.stock.time}</td>
         </tr>
     )
@@ -37,28 +37,32 @@ function History() {
         )
 
     return (
-        <table className="table">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Symbol</th>
-                <th scope="col">Buying Price</th>
-                <th scope="col">Shares</th>
-                <th scope="col">Total</th>
-                <th scope="col">Time</th>
-            </tr>
-            </thead>
+        <div>
+            <table className="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Shares</th>
+                    <th scope="col">Bought / Sold Price</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Time</th>
+                </tr>
+                </thead>
 
-            <tbody>
+                <tbody>
 
-            {data.map(function(stock, index) {
-                return (
-                    <TableRow key={index} stock={stock} index={index} />
-                )
-            })}
+                {data.map(function(stock, index) {
+                    return (
+                        <TableRow key={index} stock={stock} index={index} />
+                    )
+                })}
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+
+            <p>*Negative sign in shares indicates that the stock was sold at that price</p>
+        </div>
     )
 }
 

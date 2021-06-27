@@ -51,6 +51,30 @@ function Quote() {
                 
             </form>
 
+            <table className="table">
+                <thead>
+                <tr>
+                    <th scope="col">Company</th>
+                    <th scope="col">Symbol</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>Apple</td>
+                    <td>AAPL</td>
+                </tr>
+                <tr>
+                    <td>Tesla</td>
+                    <td>TSLA</td>
+                </tr>
+                <tr>
+                    <td>Netflix</td>
+                    <td>NFLX</td>
+                </tr>
+                </tbody>
+            </table>
+
             <ResQuote stock={stockDetails}/>
         </div>
     )

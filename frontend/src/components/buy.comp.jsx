@@ -32,10 +32,9 @@ function Buy(props) {
             .then((res) => {
                 console.log(res.data)
                 props.displayMsg(res.data)
+                history.push("/index")
             })
             .catch((err) => console.log(err))
-
-        history.push("/index")
     }
 
     return (

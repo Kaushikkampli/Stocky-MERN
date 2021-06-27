@@ -35,17 +35,17 @@ function Sell(props) {
         })
     }
 
-    function sellStock(event) {
+    async function sellStock(event) {
+        
         event.preventDefault()
 
-        axios.post("http://localhost:5000/trans/sell", stock, {withCredentials: true})
+        await axios.post("http://localhost:5000/trans/sell", stock, {withCredentials: true})
             .then((res) => {
                 console.log(res.data)
                 props.displayMsg(res.data)
+                history.push("/index")
             })
             .catch((err) => console.log(err))
-
-        history.push("/index")
     }
 
     if(isLoading)

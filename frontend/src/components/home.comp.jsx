@@ -3,10 +3,10 @@ import React from "react"
 function Home() {
     return (
         <div>
-            <h3>Scared to Buy Stocks in the real world? Why not get your hands dirty in the virtual one first!</h3>
+            <h3>Afraid of loosing money by investing in stocks? Get your feet wet in the virtual world!</h3>
 
             <p>
-            Introducing Stocky! a completely gamified replica of the real ones. You will be started off with 10000$ in your Wallet. 
+                Introducing Stocky! A completely gamified clone of the real ones. You will start off with 10000$ in your Wallet. 
             </p>
         </div>
         

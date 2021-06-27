@@ -102,7 +102,7 @@ router.route("/sell")
 
             }
             else
-                res.json("not enough shares!")
+                res.json("Not Enough Shares!")
         }
     })
 
