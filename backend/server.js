@@ -32,8 +32,8 @@ mongoose.connect(uri, {useCreateIndex: true, useNewUrlParser: true, useUnifiedTo
 .then(() => console.log("dB connected successfully"))
 .catch((err) => console.log(err))
 
-app.use("/users", usersRouter)
-app.use("/trans", transRouter)
+app.use("/api/users", usersRouter)
+app.use("/api/trans", transRouter)
 
 app.listen(port, function(){
     console.log(`listening on port ${port}`)
