@@ -13,7 +13,10 @@ dotenv.config()
 const app = express()
 const port = process.env.PORT
 
-app.use(cors())
+app.use(cors({
+    origin: "https://modest-hugle-9f10f8.netlify.app",
+    credentials: true 
+}))
 app.use(express.json())
 
 app.use(session({
