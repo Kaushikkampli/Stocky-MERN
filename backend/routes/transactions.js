@@ -72,7 +72,7 @@ router.route("/buy")
                 res.json("Bought!")
             }
             else
-                res.json("Insufficient balance!")
+                res.json("Insufficient Balance!")
     })
 
 router.route("/preSell")
