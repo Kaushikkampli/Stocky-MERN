@@ -10,5 +10,3 @@ Backend on: (Heroku)https://stockybackend.herokuapp.com/
 
 Todo:
 Optimizing the index route which is relatively slower since prices for each stock has to be updated everytime.
-
-![Demo](Stocky.gif)
