@@ -5,7 +5,7 @@ import {Input, Button} from "./partials/input.comp"
 function ResQuote(props) {
     let stock = props.stock
     return (
-        <h3>A single share of {stock.name} ({stock.symbol}) costs {stock.price}</h3>    
+        <h3>A single share of {stock.name} ({stock.symbol}) costs ${stock.price}</h3>    
     )
 }
 
