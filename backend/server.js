@@ -38,6 +38,10 @@ mongoose.connect(uri, {useCreateIndex: true, useNewUrlParser: true, useUnifiedTo
 app.use("/api/users", usersRouter)
 app.use("/api/trans", transRouter)
 
+app.get("/", function(req, res){
+    res.json("Backend Api running access the app on https://stockyfrontend.netlify.app")
+})
+
 app.listen(port, function(){
     console.log(`listening on port ${port}`)
 })
