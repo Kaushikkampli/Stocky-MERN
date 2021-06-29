@@ -4,6 +4,7 @@ Queries have to be made by the symbol of the stock.(Google the company's stock x
 
 (Click Me!)
 Hosted on: https://stockyfrontend.netlify.app/
+Since heroku dynos take some time to wake up, the site may be unresponsive. In that case click on the backend link(Heroku) and wait till its loaded and then try again.(The initial login or register might take some time..)
 
 Frontend on: (Netlify) https://stockyfrontend.netlify.app/
 Backend on: (Heroku)https://stockybackend.herokuapp.com/

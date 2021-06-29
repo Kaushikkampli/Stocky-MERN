@@ -21,7 +21,7 @@ router.route("/register")
             else
             {    
                 passport.authenticate("local")(req, res,function(){
-                    res.json("Registered!")
+                    res.json(req.user.username)
                 })
             }
         })
@@ -41,7 +41,7 @@ router.route("/login")
             {
                 if(err) 
                     return next(err)
-                res.json(req.user)
+                res.json(req.user.username)
             })
           })(req, res, next)
     })

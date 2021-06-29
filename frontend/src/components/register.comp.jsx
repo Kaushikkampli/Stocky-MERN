@@ -29,12 +29,13 @@ function Register(props) {
 
         await axios.post("/api/users/register", user)
             .then((res) => {
-                console.log(res.data)
-                props.displayMsg(res.data)
+
+                localStorage.setItem("user", res.data)
+                props.displayMsg("Registered & Logged In!")
+                props.authenticate()
+                history.push("/index")
             })
             .catch((err) => console.log(err))
-
-        history.push("/login")
     }
 
 

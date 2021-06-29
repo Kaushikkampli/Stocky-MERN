@@ -4,13 +4,6 @@ import { Navbar, Home, Register, Login, Quote, Buy, Index, Sell, History, Logout
 
 function App() {
 
-  useEffect(function(){
-    let user = localStorage.getItem("user")
-    
-    if(user)
-      setAuth(true)
-  }, [])
-
   const [isAuth, setAuth] = useState(false)
   const [status, setStatus] = useState("")
 
@@ -26,6 +19,17 @@ function App() {
     })
   }
 
+  useEffect(function(){
+    let user = localStorage.getItem("user")
+    
+    if(user)
+    {
+      authenticate()
+      setStatus("Logged In!")
+    }
+  }, [])
+
+
   return (
     <Router>
       <Navbar status={isAuth}/>
@@ -35,8 +39,8 @@ function App() {
 
       <div className="container">
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/register" exact render={() => <Register displayMsg={setStatus} />} />
+          <Route path="/" exact render={() => <Home displayMsg={setStatus} authenticate={authenticate} />} />
+          <Route path="/register" exact render={() => <Register displayMsg={setStatus} authenticate={authenticate} />} />
           <Route path="/login" exact render={() => <Login authenticate={authenticate} displayMsg={setStatus}/>} />
           
           <Route path="/index" exact component={Index} />

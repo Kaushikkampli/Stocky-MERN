@@ -22,7 +22,8 @@ app.use(express.json())
 app.use(session({
     secret: "I actaully liked the song Baby",
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookie: { maxAge : 3600000 }
 }))
 
 app.use(cookieParser("I actaully liked the song Baby"))
